@@ -11,6 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'ClienteControlador@index');
+Route::get('/novocliente', 'ClienteControlador@create');
+Route::post('/novocliente', 'ClienteControlador@store');
+
